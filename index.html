@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="layout">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <h1 class="logo">Gillian Young</h1>
-            <img src="AdobeStock_871456539.png" alt="Gillian Young" class="profile-img">
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#aspirations">Aspirations & Goals</a></li>
-                    <li><a href="#favorites">Favorites</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <header>
+        <h1 class="name">Gillian Elizabeth Young</h1>
+        <img src="AdobeStock_871456539.png " alt="Flower" class="flower-img">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#aspirations">Aspirations & Goals</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="layout">
         <!-- Main Content -->
         <main class="content">
             <section id="about-me" class="section">
@@ -54,6 +53,7 @@
                     <p>Helping friends and family design their spaces is something I find incredibly rewarding. I love finding creative ways to optimize and transform spaces.</p>
                     <img src="AdobeStock_813073024.jpeg" alt="Interior Design">
                 </div>
+    
             </section>
 
             <section id="aspirations" class="section">
@@ -66,6 +66,9 @@
                     <li>Enhance my writing skills</li>
                     <li>Advance my woodworking abilities to create unique furniture pieces, including creative side tables and desks</li>
                 </ul>
+                 <img src="AdobeStock_1072576657 (1).jpeg" alt="Gillian Young" class="profile-img">
+                <img src="AdobeStock_987488005.jpeg" alt="Gillian Young" class="profile-img">
+                <img src="AdobeStock_258749681.jpeg" alt="Gillian Young" class="profile-img">
             </section>
 
             <section id="favorites" class="section">
@@ -77,6 +80,7 @@
                     <li><strong>Activities:</strong> Running, volleyball, visiting cafes</li>
                     <li><strong>Weather:</strong> Rainy days</li>
                 </ul>
+                <img src="flower-image.jpg" alt="Flower" class="flower-img">
             </section>
 
             <section id="contact" class="section">
@@ -95,85 +99,92 @@
         body {
             margin: 0;
             font-family: 'Georgia', serif;
-            background-color: #fdf7f1;
+            background-color: #f5f3f1;
             color: #2b2b2b;
             line-height: 1.6;
         }
 
-        .layout {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Sidebar styles */
-        .sidebar {
-            background-color: #8b0000; /* Dark red */
-            color: #fff;
-            width: 250px;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar .logo {
-            font-size: 1.8em;
+        header {
+            background-color: #fdf5e6;
+            padding: 20px 0;
             text-align: center;
-            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .name {
+            font-size: 2.5em;
+            color: #8b0000; /* Deep red for your name */
+            margin: 0;
             font-family: 'Baskerville', serif;
+            text-transform: uppercase;
         }
 
-        .sidebar nav ul {
+        nav ul {
             list-style: none;
+            display: flex;
+            justify-content: center;
             padding: 0;
+            margin: 10px 0 0;
         }
 
-        .sidebar nav ul li {
-            margin: 20px 0;
+        nav ul li {
+            margin: 0 20px;
         }
 
-        .sidebar nav ul li a {
+        nav ul li a {
             text-decoration: none;
-            color: #fff;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            color: #8b0000;
             transition: color 0.3s ease;
         }
 
-        .sidebar nav ul li a:hover {
-            color: #ffd700; /* Gold hover effect */
+        nav ul li a:hover {
+            color: #ffd700; /* Chic gold hover effect */
         }
 
         /* Main content styles */
         .content {
-            flex: 1;
             padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section {
             margin-bottom: 40px;
             background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .section h2 {
             color: #8b0000;
             border-bottom: 2px solid #8b0000;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        .section p, .section ul {
+            font-size: 1.1em;
             margin-bottom: 20px;
         }
 
-        .hobby {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .hobby img {
-            max-width: 150px;
+        .hobby img, .flower-img {
+            max-width: 120px; /* Reduced size for flower image */
             margin-left: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .flower-img {
+            max-width: 120px; /* Smaller flower image size */
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .profile-img {
@@ -183,20 +194,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Footer styles */
         .footer {
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
             margin-top: 40px;
             background-color: #8b0000;
             color: #fff;
-            font-size: 0.9rem;
+            font-size: 1em;
         }
     </style>
 </body>
 </html>
-
-
-
-
-   
